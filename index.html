@@ -6,23 +6,94 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Curriculum con Bootstrap</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
     <h1 class="text-center text-capitalize">Curriculum Vitae</h1>
-<!-- <table class="table table-black table-striped table-hover">
-       <th>
-           <tr>
-               <th><button class="btn btn-dark">Experiencia</button></th>
-               <th><button class="btn btn-dark">Experiencia</button></th>
-               <th><button class="btn btn-dark">Experiencia</button></th>
-           </tr>
-       </th>
-    </table>
--->
-    <div class="d-grid gap-sm-2 dropdown">
-        <button type="button" class="btn btn-dark btn-block dropdown-toggle" data-bs-toggle="dropdown">Experiencia</button>
-        <button type="button" class="btn btn-dark btn-block dropdown-toggle" data-bs-toggle="dropdown">Formación</button>
-        <button type="button" class="btn btn-dark btn-block dropdown-toggle" data-bs-toggle="dropdown">Contacto</button>
+    <div class="container mt-3 gap-3">
+        <div class="d-grid collapse">
+            <button type="button" class="btn btn-dark btn-block" data-bs-toggle="collapse" data-bs-target="#exp">Experiencia</button>
+                <div id="exp" class="collapse">
+                    Sep 2004 - May 2008 Colegio San Francisco de Paula, Título de Bachillerato Graduado con altos honores.<br> --> Presidente del Club de Periodismo <br>
+                    Ago 2016 - Presente Universidad de Sevilla, Licenciado en Ingeniería Informática.<br> --> Nota media: 11,5
+                </div>
+            <button type="button" class="btn btn-dark btn-block" data-bs-toggle="collapse" data-bs-target="#form">Formación</button>
+                <div id="form" class="collapse">
+                    <!-- Info de formación (TABLA)-->
+                    <table class="table table-black table-striped table-hover">
+                        <thead>
+                            <tr>
+                                <th>Años</th>
+                                <th>Estudios</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>2004-2008</td>
+                                <td>Educación Secundaria Obligatoria</td>
+                            </tr>
+                            <tr>
+                                <td>2008-2010</td>
+                                <td>Formación Profesional I IFCM01</td>
+                            </tr>
+                            <tr>
+                                <td>2010-2012</td>
+                                <td>Formación Profesional II IFCS01</td>
+                            </tr>
+                            <tr>
+                                <td>2012-2016</td>
+                                <td>Grado en Ingeniería Informática</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            <button type="button" class="btn btn-dark btn-block" data-bs-toggle="collapse" data-bs-target="#cont">Contacto</button>
+                <div id="cont" class="collapse">
+                    <!-- Info de contacto (FORMULARIO)-->
+                    <form action="/action_page.php">
+                        <div class="mb-3 mt-3">
+                          <label for="emp">Empresa:</label>
+                          <input type="text" class="form-control" id="emp" placeholder="Nombre de la empresa" name="emp">
+                        </div>
+                        <div class="mb-3">
+                          <label for="email">Email:</label>
+                          <input type="email" class="form-control" id="email" placeholder="Ingrese su correo electrónico" name="email">
+                        </div>
+                        <!--Casilla para "recordar a la gente"
+                        <div class="form-check mb-3">
+                          <label class="form-check-label">
+                            <input class="form-check-input" type="checkbox" name="recordar"> Recordarme
+                          </label>
+                        </div>
+                        -->
+                        <div class="mb-3">
+                            <label for="comm">Observaciones:</label>
+                            <textarea class="form-control" rows="6" id="comm" placeholder="Observaciones" name="comm"></textarea>
+                        </div>
+                        <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#myModal">Enviar</button>
+                        <!--Modal-->
+                        <div class="modal fade" id="myModal">
+                            <div class="modal-dialog">
+                              <div class="modal-content">
+                                <!-- Modal Header -->
+                                <div class="modal-header">
+                                  <h4 class="modal-title">Enhorabuena, has ganado un iphone 13!!</h4>
+                                  <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                                </div>
+                                <!-- Modal body -->
+                                <div class="modal-body">
+                                  Espero que lo disfrutes Luis :D
+                                </div>
+                                <!-- Modal footer -->
+                                <div class="modal-footer">
+                                  <button type="button" class="btn btn-outline-dark" data-bs-dismiss="modal">Gracias</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                      </form>
+                </div>
+        </div>
     </div> 
 </body>
 </html>
